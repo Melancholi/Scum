@@ -153,6 +153,7 @@ public class Scum{
 		return playableCards;
 	}
 	
+		
 	public void viewAllPlayersCards(Hand[] usersHand){
 		for(int i=0;i<usersHand.length;i++){
 			System.out.println(usersHand[i]);

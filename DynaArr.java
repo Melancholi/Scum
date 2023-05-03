@@ -50,6 +50,7 @@ public class DynaArr{
 	
 	//take one from top
 	public Card dealCard(){
+		//this part doesnt change anything but I still kept it
 		if(this.pointer==0){
 			Card cardToGive = this.cards[this.pointer];
 			this.cards[this.pointer] = null;
@@ -99,16 +100,12 @@ public class DynaArr{
 				this.pointer++;
 			}
 		}
-		//this is to add 2 joker cards to the deck, WIP
-		// for(int i=0;i<2;i++){
-		// cards[this.pointer] = new Card(Value.JOKER,Status.JOKER);
-		// this.pointer++;
-		// }
 	}
 	public void discardPile(){
 		for(int i=0;i<this.pointer;i++){
 			this.cards[i]=null;
 		}
+		this.pointer=0;
 	}
 	public boolean isEmpty(){
 		int numberOfNulls=0;
@@ -131,4 +128,4 @@ public class DynaArr{
 }
 
 	
-	// change types from STRING -> Cards
+	
